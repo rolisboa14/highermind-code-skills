@@ -9,7 +9,7 @@ echo "  highermind-code-skills"
 echo "  ----------------------"
 echo ""
 
-for skill in hm-init hm-engineer hm-design hm-qa hm-align; do
+for skill in hm-init hm-engineer hm-design hm-qa; do
     target="$SKILLS_DIR/$skill"
     if [ -L "$target" ] || [ -e "$target" ]; then
         rm -rf "$target"
@@ -19,13 +19,17 @@ for skill in hm-init hm-engineer hm-design hm-qa hm-align; do
 done
 
 echo ""
-echo "  Skills instaladas. Comandos disponíveis:"
+echo "  Skills de execução instaladas:"
 echo ""
 echo "    /hm-init       Começar um novo projeto"
 echo "    /hm-engineer   Validar código"
 echo "    /hm-design     Validar interface"
 echo "    /hm-qa         Testar tudo"
+echo ""
+echo "  Skills de direção (highermind-business-skills):"
 echo "    /hm-align      Checar alinhamento de produto"
+echo "    /hm-sequoia    Guardrail estratégico: futuro > passado"
+echo "    https://github.com/rodrigohighermind/highermind-business-skills"
 echo ""
 
 if [ ! -f "$HOME/.claude/CLAUDE.md" ]; then

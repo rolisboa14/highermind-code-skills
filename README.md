@@ -2,7 +2,9 @@
 
 **Antes de existir uma empresa, existiu uma mente que decidiu construir.**
 
-Cinco modos cognitivos para o [Claude Code](https://docs.anthropic.com/en/docs/claude-code). Construído em cima da filosofia Higher Mind: empresas são extensões da arquitetura interna do fundador. Se o código é mediano, o padrão era mediano. Se o software é world-class, a mente por trás dele exigiu world-class.
+Quatro modos cognitivos de execução para o [Claude Code](https://docs.anthropic.com/en/docs/claude-code). Construído em cima da filosofia Higher Mind: empresas são extensões da arquitetura interna do fundador. Se o código é mediano, o padrão era mediano. Se o software é world-class, a mente por trás dele exigiu world-class.
+
+Skills de direção estratégica (`/hm-align`, `/hm-sequoia`) estão em [highermind-business-skills](https://github.com/rodrigohighermind/highermind-business-skills).
 
 Isso não é um pack de prompts. É um padrão, codificado uma vez, pra você nunca mais ter que se repetir.
 
@@ -16,8 +18,6 @@ Toda vez que você abre o Claude Code, você começa do zero. O agente não sabe
 - "Checa segurança. Todas as camadas."
 - "O design precisa ser nível Apple."
 - "Roda testes. Cobre tudo."
-- "Isso é realmente a coisa certa pra construir?"
-
 Você fala as mesmas coisas, com palavras diferentes, toda vez. A qualidade do output depende de quão bem você traduz o seu padrão naquele momento específico.
 
 highermind-code-skills resolve isso. Você traduz o seu padrão uma vez. Depois ele está sempre lá.
@@ -38,7 +38,8 @@ Duas camadas:
 | `/hm-engineer` | Validar código | Arquitetura, segurança, performance, qualidade. Todas as camadas. Production-grade. |
 | `/hm-design` | Validar interface | Pra onde o software está indo, não pra onde ele esteve. Sofisticação, encantamento, beleza. |
 | `/hm-qa` | Testar tudo | Roda, quebra, verifica que funciona. Edge cases, fluxos, uso real. |
-| `/hm-align` | Validar produto | Isso é a coisa certa pra construir? Está alinhado com a visão? |
+
+> Skills de direção (`/hm-align`, `/hm-sequoia`) estão em [highermind-business-skills](https://github.com/rodrigohighermind/highermind-business-skills).
 
 ---
 
@@ -50,10 +51,11 @@ Duas camadas:
 /hm-design     você valida se a interface está na barra.
 /hm-engineer   você valida se o código está na barra.
 /hm-qa         você verifica que realmente funciona.
-/hm-align      a qualquer momento: isso está alinhado com a visão?
 ```
 
-Você não precisa usar os cinco toda vez. Use o que o momento pede. `/hm-align` pode vir primeiro, por último, ou no meio. `/hm-engineer` e `/hm-design` podem rodar várias vezes enquanto você itera.
+Você não precisa usar as quatro toda vez. Use o que o momento pede. `/hm-engineer` e `/hm-design` podem rodar várias vezes enquanto você itera.
+
+> Pra validar direção e estratégia, use as [business skills](https://github.com/rodrigohighermind/highermind-business-skills): `/hm-align` (é a coisa certa?) e `/hm-sequoia` (está indo pro futuro?).
 
 ---
 
@@ -62,16 +64,6 @@ Você não precisa usar os cinco toda vez. Use o que o momento pede. `/hm-align`
 ```
 Você:  Preciso construir o fluxo de aplicação pra uma comunidade de founders.
        Membros aplicam, são avaliados, aceitos ou colocados em waitlist.
-
-Você:  /hm-align
-
-Claude: O que a aplicação está filtrando? Se filtra por métricas
-        (receita, tamanho do time, tração), você está construindo um clube.
-        Se filtra por alinhamento com construção, você está construindo
-        uma comunidade. Qual das duas é essa?
-
-Você:  Alinhamento. O formulário precisa revelar como a pessoa pensa
-       sobre construir.
 
 Você:  /hm-init
 
@@ -227,23 +219,6 @@ O padrão: você deployaria isso com confiança numa sexta à noite.
 
 ---
 
-## `/hm-align`
-
-**Validar produto.**
-
-Antes de construir, durante, ou depois. A qualquer momento você pode digitar `/hm-align` e o agente sai do modo executor e entra no modo conselheiro.
-
-Ele pergunta:
-
-- **Isso é a coisa certa pra construir?** Serve a visão ou é uma distração?
-- **O timing é certo?** Deveria existir agora, ou outra coisa precisa vir primeiro?
-- **Pra quem é isso?** Pra visão do fundador, pra necessidade real do usuário, ou pra um requisito imaginário?
-- **Isso cria valor real?** Ou só dá a sensação de estar sendo produtivo?
-
-`/hm-align` é a skill Higher Mind. A que a maioria das ferramentas de IA nunca vai ter. Porque a maioria das ferramentas de IA otimiza pra "construa mais rápido." Essa pergunta: "você deveria construir isso?"
-
----
-
 ## Instalação
 
 **Requisitos:** [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [Git](https://git-scm.com/).
@@ -295,7 +270,7 @@ cd ~/.claude/skills/highermind-code-skills && git fetch origin && git reset --ha
 ## Desinstalação
 
 ```
-for s in hm-init hm-engineer hm-design hm-qa hm-align; do rm -f ~/.claude/skills/$s; done && rm -rf ~/.claude/skills/highermind-code-skills
+for s in hm-init hm-engineer hm-design hm-qa; do rm -f ~/.claude/skills/$s; done && rm -rf ~/.claude/skills/highermind-code-skills
 ```
 
 ---

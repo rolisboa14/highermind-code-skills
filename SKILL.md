@@ -1,6 +1,6 @@
 # highermind-code-skills
 
-Cinco modos cognitivos pro Claude Code, construídos na filosofia Higher Mind.
+Quatro modos cognitivos de execução pro Claude Code, construídos na filosofia Higher Mind.
 
 ## Skills disponíveis
 
@@ -8,7 +8,8 @@ Cinco modos cognitivos pro Claude Code, construídos na filosofia Higher Mind.
 - `/hm-engineer` — Validar código em todas as camadas (arquitetura, segurança, performance, qualidade)
 - `/hm-design` — Validar interface contra o mais alto padrão de design de software
 - `/hm-qa` — Testar tudo, encontrar gaps, verificar que funciona
-- `/hm-align` — Checar alinhamento de produto. Isso é a coisa certa pra construir?
+
+Skills de direção estratégica (`/hm-align`, `/hm-sequoia`) estão em [highermind-business-skills](https://github.com/rodrigohighermind/highermind-business-skills).
 
 Cada skill tem seu próprio SKILL.md na subpasta.
 
