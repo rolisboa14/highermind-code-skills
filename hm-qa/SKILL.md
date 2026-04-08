@@ -34,11 +34,13 @@ Para cada endpoint da API, verificar:
 - CORS restrito?
 - Headers de seguranca presentes?
 
-#### Secrets Scan
-- Grep por patterns de secrets no codebase: `sk-`, `api_key=`, `password=`, `token=`, `secret=`
+#### Secrets Scan (smoke test)
+- Grep por patterns basicos: `sk-ant-`, `sk_live_`, `AKIA`, `password=`, `-----BEGIN.*KEY`
 - `.env` no `.gitignore`?
 - Nenhum secret em commits anteriores? (`git log --all -S "sk-ant"` etc.)
 - Logs nao expoe secrets?
+
+> Para scan completo com 20+ patterns (Stripe, Slack, SendGrid, DB URLs, etc.), usar `/hm-security` Dominio 7.
 
 **Todo finding de seguranca e CRITICO. Bloqueia ship.**
 
@@ -176,3 +178,4 @@ Pronto pra shippar / BLOQUEADO — X issues de seguranca + Y issues funcionais
 - Custo conta como metrica. API call desnecessaria e desperdicio.
 - **Finding de seguranca e CRITICO. Bloqueia ship. Sem negociacao.**
 - O padrao: voce deployaria isso com confianca numa sexta a noite.
+- **Para deep security audit (OWASP ASVS, LLM, multi-tenant, file upload, business logic), usar `/hm-security`.**

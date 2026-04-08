@@ -154,6 +154,8 @@ VEREDICTO
 Pronto pra deploy / BLOQUEADO — X criticos, Y altos pra resolver primeiro
 ```
 
+> Para auditoria de seguranca completa (OWASP ASVS, LLM, multi-tenant, business logic), usar `/hm-security` apos o deploy estar funcional.
+
 ## Regras
 - **Security Gate e a PRIMEIRA coisa que roda. Se falha, nao continua.**
 - Nunca assuma que "funciona na minha maquina" e suficiente

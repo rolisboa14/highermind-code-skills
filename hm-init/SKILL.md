@@ -145,6 +145,7 @@ EXPOSE 3000
 ENV PORT=3000 HOSTNAME="0.0.0.0"
 CMD ["node", "server.js"]
 ```
+**Requer** `output: 'standalone'` no `next.config.ts`. Sem isso, `.next/standalone` nao existe e o build falha.
 
 #### Entrypoints separados dev/prod
 - `entrypoint.sh` (prod): sem `--reload`, sem debug flags
@@ -221,3 +222,4 @@ Apos o init, o fundador deve conseguir:
 - **Nunca crie um projeto sem .dockerignore, multi-stage Dockerfile, e non-root user**
 - **Nunca use `npm run dev` ou `--reload` em Dockerfile de producao**
 - Se o projeto vai ter agente AI, arquitete agent-first desde o inicio — nao "adiciona agente depois"
+- **Apos o init, rodar `/hm-security` L1 pra validar que a fundacao de seguranca esta solida**

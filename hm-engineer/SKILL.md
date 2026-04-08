@@ -39,7 +39,9 @@ Se qualquer um desses existe, e finding CRITICO automatico.
 | A09 | Logging Failures | Eventos de seguranca logados? Sem secrets nos logs? Audit trail? |
 | A10 | SSRF | Requests a URLs externas validadas? Sem user input em URLs internas? |
 
-**Todo finding de seguranca e CRITICO. Nunca MEDIO, nunca BAIXO.**
+**Severidade proporcional ao impacto real.** SQL injection = CRITICO. Health check raso = MEDIO. Nao inflar findings.
+
+> Para auditoria de seguranca completa (OWASP ASVS, supply chain, LLM, multi-tenant, file upload), use `/hm-security`.
 
 ### Seguranca — Container & Infraestrutura
 
@@ -153,7 +155,8 @@ No final:
 - Seja direto. Nada de "voce pode querer considerar." Diga o que precisa mudar.
 - Cheque TODAS as camadas. Nao so a mais facil de revisar.
 - **Seguranca e SEMPRE a primeira camada auditada. Nao a ultima.**
-- **Todo finding de seguranca e CRITICO. Sem excecao.**
+- **Severidade proporcional: secrets expostos = CRITICO, health check raso = MEDIO. Nao inflar.**
 - **Se `.dockerignore` nao existe, e CRITICO. Se Dockerfile roda dev server, e CRITICO. Se container roda como root, e ALTO.**
+- **Para deep security audit, usar `/hm-security`.**
 - Custo conta como finding. API call desnecessaria e bug de performance.
 - Dados em risco e sempre CRITICO. Nunca MEDIO, nunca BAIXO.
